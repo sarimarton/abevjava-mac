@@ -1,16 +1,19 @@
-# Abevjava (ÁNYK) telepítése macOS-re (összes OS verzió, Intel/Apple Silicon)
+# Abevjava (ÁNYK) telepítése macOS-re
 
-#catalina #bigsur #monterey #m1
+## Ezzel működni fog az abevjava a Maceden a beküldés funkcióval együtt, függetlenül attól, hogy az OS Catalina, Big Sur, Monterey vagy akármelyik későbbi verzió, és hogy a processzor Intel vagy Apple Silicon.
 
-Intro: Ha vállalkozó vagy, kell neked az abevjava. Ha maced van, nem olyan egyszerű a téma.
+Ha vállalkozó vagy, kell neked az abevjava. Ha maced van, nem olyan egyszerű a téma.
 - A youtube-os guide-ok nem működnek ([ref 1](https://www.youtube.com/watch?v=IfNgQSIgwXA), [ref 2](https://www.youtube.com/watch?v=0dQQbkVdOwI)), a netelérés (tehát a beküldés vagy a törzsadatok szinkronizációja) nem fog működni, hiába telepítgetsz régebbi java verziókat
 - Ráadásul eleve nem akarod javával szemetelni a rendszered.
 - A NAV oldalán van egy JRE-vel együtt bundle-olt csomag Windowsra, ami nagyon kényelmes, csak az Windows.
 - Apple Siliconon még kényesebb a téma. QEMU alá WinXP vagy Win 7-tel a Java nem fog működni, nem keresem vissza, mi a hibaüzenet.
-- Ami működik: Wine. Ezzel működik minden a NAV-os bundle-lal, tehát mindig az általuk hozzácsomagolt java fog futni az általuk tesztelt elsődleges rendszeren. Ehhez találhatók alább a segédletek.
+- Ami működik: Wine. Ezzel megy minden a NAV-os bundle-lal, tehát mindig az általuk hozzácsomagolt java fog futni az általuk tesztelt elsődleges rendszeren. Ehhez találhatók alább a segédletek.
 
 ## Automatikus telepítő/indító app:
-  https://github.com/sarimarton/abevjava-mac/releases
+
+Itt letölthető: https://github.com/sarimarton/abevjava-mac/releases
+  
+Az app Automatorral készült, meg is lehet vele nyitni szerkesztésre. A ~/Documents/abevjava-wine alá telepíti a csomagokat, így az iCloud szinkronizáció is működik, ha gépet váltasz. Telepíti a függőségeket (homebrew, wine), ha nincsenek telepítve. Két futtatás között akár le is lehet törölni a Wine prefixet (~/.wine mappa).
 
 ## Telepítés kézzel
 
