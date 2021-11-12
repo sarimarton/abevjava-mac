@@ -5,7 +5,7 @@ Intro: Ha vállalkozó vagy, kell neked az abevjava. Ha maced van, nem olyan egy
 - Ráadásul eleve nem akarod javával szemetelni a rendszered.
 - A NAV oldalán van egy JRE-vel együtt bundle-olt csomag Windowsra, ami nagyon kényelmes, csak az Windows.
 - Apple Siliconon még kényesebb a téma. QEMU alá WinXP vagy Win 7-tel a Java nem fog működni, nem keresem vissza, mi a hibaüzenet.
-- Ami működik: Wine. Ezzel működik minden a NAV-os bundle-lal. Ehhez találhatók alább a segédletek.
+- Ami működik: Wine. Ezzel működik minden a NAV-os bundle-lal, tehát mindig az általuk hozzácsomagolt java fog futni az általuk tesztelt elsődleges rendszeren. Ehhez találhatók alább a segédletek.
 
 ## Automatikus telepítő/indító app:
   https://github.com/sarimarton/abevjava-mac/releases
