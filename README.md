@@ -12,13 +12,13 @@
    - Illeszd be a telepítőparancsot és menj végig a telepítésen
    
 2. Telepítsd a Wine-t:
-   - Terminal ablakban indíts el az alábbi parancsot:
+   - Terminal ablakban futtasd:
       `brew tap gcenx/wine && brew install wine-crossover`
    - Adj engedélyt a wine futtatásához:
-      - Indítsd el a feltelepült `Wine Crossover.app` appot. Ekkor kapsz egy hibaüzenetet. Cancel.
+      - Indítsd el a feltelepült `Wine Crossover.app` appot. Ekkor kapsz egy hibaüzenetet. Cancel (Mégsem).
       - Menj a System Preferences-be (Rendszerbeállítások), majd Security and Privacy, General (Általános) fül,
         alul kattintsd ki a lakatot, majd a `"Wine Crossover.app" was blocked` felirat mellett kattints az "Open Anyway" gombra.
-   - Terminalban indítsd el az alábbi parancsot:
+   - Terminalban futtasd:
       `wine REG ADD HKCU\\Software\\Wine\\Mac\ Driver /v ForceOpenGLBackingStore /t REG_SZ /d y`
 
 3. Telepítsd az abevjava + JRE Windows-os csomagot:
@@ -27,3 +27,22 @@
    - Terminalban futtasd: `wine ~/Downloads/abevjava_install_oracle_jre.exe`
    - Menj végig a telepítésen
 
+4. Készíts indítóparancsot
+  - Nyisd meg az Automator appot
+  - Válaszd ki a `File` menü / `New` menüpontot
+  - Választ az Applicationt
+  - Adj hozzá egy `Run AppleScript` actiont, és másold be neki ezt:
+    ```
+    on run {input, parameters}
+        tell application "Terminal" to do script "wine cmd.exe /c 'C:/users/Public/abevjava/jre/bin/java -jar c:/users/Public/abevjava/abevjava.jar'"
+    end run
+    ```
+  - Mentsd el
+  - Adj neki ikont:
+    - Finderben keresd ki az abevjava.ico vagy .png fájlt az abevjava mappájában, és jelöld ki
+    - `Command + C`
+    - Finderben jelöld ki az Automatorral készül appodat
+    - `Command + I`
+    - Kattints a bal felső ikonra a panelen belül - ki lesz jelölve.
+    - `Command + V`
+    - Csukd be a panelt
