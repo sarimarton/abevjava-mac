@@ -1,4 +1,4 @@
-# Abevjava (ÁNYK) telepítése macOS-re
+# Abevjava (ÁNYK) macOS-en
 
 ## Ezzel működni fog az abevjava a Maceden a beküldés funkcióval együtt, függetlenül attól, hogy az OS Catalina, Big Sur, Monterey vagy akármelyik későbbi verzió, és hogy a processzor Intel vagy Apple Silicon.
 
